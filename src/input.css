@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@config '../../tailwind.config.js'
+
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+/* tạo và sử dụng animation
+bước 1: tạo @keyframes
+bước 2: gắn keyframes vừa tạo vào --animate
+bước 3: thêm các hiệu ứng như duration, infinite ....  */
+@theme {
+  --animate-spin-custom: spin-custom 0.7s infinite;
+
+  @keyframes spin-custom {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
